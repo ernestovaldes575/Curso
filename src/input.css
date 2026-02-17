@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+    --grid-templete-areas-app:
+        "header header header"
+        "stats stats stats"
+        "content content side"
+        "footer footer footer";
+}
+
+@layer components {
+
+    /* Contenedor Principal del Grid */
+    .grid-layout {
+        display: grid;
+        grid-template-areas: var(--grid-template-areas-app);
+        gap: 1.5rem;
+    }
+
+    /* Asignación de áreas a clases */
+    .area-header {
+        grid-area: header;
+    }
+
+    .area-stats {
+        grid-area: stats;
+    }
+
+    .area-content {
+        grid-area: content;
+    }
+
+    .area-side {
+        grid-area: side;
+    }
+
+    .area-footer {
+        grid-area: footer;
+    }
+}

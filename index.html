@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Tailwind</title>
+    <link href="dist/output.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-slate-100">
+
+    <nav class="bg-white/80 backdrop-blur-md border-b border-gray-200 px-6 py-4 flex justify-between items-center sticky top-0 z-50">
+        <div class="text-xl font-bold text-indigo-600">
+            Sistema de <span class="text-gray-600">Control</span>
+        </div>
+
+        <div class="hidden md:flex space-x-8 font-medium text-gray-600">
+            <a href="#" class="hover:text-indigo-600 transition">Inicio</a>
+            <a href="#" class="hover:text-indigo-600 transition">Proyectos</a>
+            <a href="#" class="hover:text-indigo-600 transition">Configuración</a>
+        </div>
+
+        <div>
+            <a href="#" class="bg-indigo-500 hover:bg-indigo-600 text-white p-2 rounded-2xl hover:shadow-md transition font-bold tracking-wider">
+                Acceso de Usuario
+            </a>
+        </div>
+    </nav>  
+
+    <main class=" flex flex-col items-center p-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 mb-8 w-full max-w-4xl">
+
+            <div class="card-stat">
+                <p class="card-stat-title">Secciones Totales</p>
+                <div class="flex items-center gap-2">
+                    <span class="relative flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                    <p class="card-stat-value text-xl">Activo</p>
+                </div>
+            </div>
+
+            <div class="card-stat">
+                <p class="card-stat-title">Participación</p>
+                <p class="card-stat-value">64.4%</p>
+            </div>
+
+            <div class="card-stat">
+                <p class="card-stat-title">Estado</p>
+                <p class="card-stat-value">Activo</p>
+            </div>
+        </div>
+        
+        <div class="w-full max-w-4xl bg-white p-8 rounded-2xl shadow-sm border border-gray-200 mb-8">
+            <h2 class="text-xl font-bold text-gray-800 mb-6">Registrar Nueva Seccion</h2>
+            <form class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                    <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Municipio</label>
+                    <input type="text" placeholder="Ej. Toluca" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none transition">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-500 uppercase mb-1">Clave Sección</label>
+                    <input type="number" placeholder="0000" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:outline-none transition">
+                </div>
+                <div class="flex items-end">
+                    <button class="w-full bg-indigo-600 text-white font-bold py-2 rounded-lg hover:bg-indigo-700 transition">
+                        Guardar Datos
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="w-full max-w-4xl bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+            <table class="w-full text-left">
+                <thead class="bg-gray-50 border-b border-gray-200">
+                    <tr>
+                        <th class="px-6 py-4 text-xs font-bold text-gray-500 uppercase">Municipio</th>
+                        <th class="px-6 py-4 text-xs font-bold text-gray-500 uppercase">Sección</th>
+                        <th class="px-6 py-4 text-xs font-bold text-gray-500 uppercase">Estado</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    <tr class="hover:bg-slate-50 transition">
+                        <td class="px-6 py-4 text-sm font-medium text-gray-700">Zinacantepec</td>
+                        <td class="px-6 py-4 text-sm text-gray-600">2105</td>
+                        <td class="px-6 py-4">
+                            <span class="px-3 py-1 text-sm font-bold bg-yellow-100 text-yellow-700 rounded-full">
+                                Pendiente
+                            </span>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-slate-50 transition">
+                        <td class="px-6 py-4 text-sm font-medium text-gray-700">Metepec</td>
+                        <td class="px-6 py-4 text-sm text-gray-600">2106</td>
+                        <td class="px-6 py-4">
+                            <span class="px-3 py-1 text-sm font-bold bg-green-100 text-green-700 rounded-full">
+                                Validado
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 text-sm font-medium text-gray-700">Toluca</td>
+                        <td class="px-6 py-4 text-sm text-gray-600">2107</td>
+                        <td class="px-6 py-4">
+                            <span class="px-3 py-1 text-sm font-bold bg-red-100 text-red-700 rounded-full">
+                                Cancelado
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="w-full bg-white border-top border-gray-200 mt-auto">
+        <div class=" max-w-4xl mx-auto px-10 flex justify-between items-center text-gray-400 text-xs font-bold uppercase tracking-widest">
+            <p>
+                &copy; 2024 Sistema de Control. Todos los derechos reservados.
+            </p>
+            <p>
+                Versión 1.0.4 
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

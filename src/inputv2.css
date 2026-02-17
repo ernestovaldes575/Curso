@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* En v4 no necesitas @layer components para cosas simples, 
+   pero si quieres agrupar estilos, hazlo así: */
+
+.card-stat {
+    @apply bg-white p-6 rounded-xl shadow-sm border-l-4 border-indigo-500 transition-all;
+
+    &:hover {
+        @apply shadow-md;
+    }
+}
+
+.card-stat-title {
+    @apply text-xs font-bold text-gray-400 uppercase tracking-wider;
+}
+
+.card-stat-value {
+    @apply text-3xl font-black text-slate-800;
+}
+
+.btn-primary {
+    @apply bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg transition-colors shadow-sm;
+
+    &:hover {
+        @apply bg-indigo-700;
+    }
+
+    &:active {
+        @apply scale-95;
+    }
+}
